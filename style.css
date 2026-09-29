@@ -1,0 +1,663 @@
+/* ================= CONFIGURAÇÕES GERAIS ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que os espaçamentos não quebrem o tamanho dos blocos */
+}
+
+html {
+    scroll-behavior: smooth; /* Faz a página rolar suavemente quando clica no menu */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte limpa e moderna */
+    background-color: #1e1e1e; /* Fundo grafite escuro industrial */
+    color: #eeeeee; /* Cor dos textos principais em cinza claro para alto contraste */
+    line-height: 1.6; /* Melhora o espaçamento entre as linhas de texto para facilitar a leitura */
+}
+
+/* Estilo padrão para os títulos do site */
+h1, h2, h3, h4 {
+    color: #ffcc00; /* Amarelo segurança/industrial vibrante para os destaques */
+    font-weight: 600;
+}
+
+/* Configuração padrão para links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= CABEÇALHO (HEADER) ================= */
+header {
+    background-color: #111111; /* Fundo preto absoluto para destacar bem o menu */
+    padding: 20px 40px; /* Espaço interno: 20px em cima/baixo e 40px nas laterais */
+    display: flex;
+    justify-content: space-between; /* Joga o logo para a esquerda e o menu para a direita */
+    align-items: center; /* Alinha o texto do logo e do menu perfeitamente no meio (vertical) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Uma sombra escura embaixo da barra */
+    position: sticky;
+    top: 0; /* Faz a barra ficar fixa no topo quando o cliente rolar a página */
+    z-index: 1000; /* Garante que o menu sempre fique por cima de qualquer outro conteúdo */
+}
+
+/* O título principal (Logo) */
+header h1 {
+    font-size: 24px;
+    letter-spacing: 2px; /* Dá um espaço chique entre as letras do nome */
+    color: #ffcc00; /* Nome em amarelo industrial */
+}
+
+/* ================= LINKS DO MENU ================= */
+header a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #bbbbbb; /* Cinza claro neutro */
+    transition: color 0.3s ease;
+    display: inline-block; /* Permite aplicar espaçamentos corretamente nos links */
+    margin-left: 35px; /* Cria um espaço de 35px na esquerda de cada palavra */
+}
+
+/* Garante que o título principal não seja empurrado para a direita */
+header h1 a, header h1 {
+    margin-left: 0 !important;
+}
+
+/* Efeito ao passar o mouse por cima do link */
+header a:hover {
+    color: #ffcc00; /* Muda para o amarelo industrial ao passar o mouse */
+}
+
+header nav ul li a:hover, header ul li a:hover {
+    color: #ffcc00;
+}
+
+/* ================= SEÇÃO DA LOGO INTEGRADA ================= */
+#inicio {
+    background-color: #1e1e1e; 
+   padding: 40px 20px 0px 20px; /* Deixe em 0px. O padding NÃO aceita números negativos! */
+    text-align: center;         
+    width: 100%;                
+}
+
+.banner-conteudo {
+    max-width: 600px;
+    margin: 0 auto;             
+    display: block;             
+}
+
+/* Configuração da imagem transparente centralizada */
+.logo-principal {
+    max-width: 320px; 
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    /* 🌟 O SEGREDO ESTÁ AQUI: Altere os números abaixo para ajustar os espaços */
+    margin: -50px auto -90px auto; 
+}
+
+/* Frase de efeito estilizada */
+.subtitulo-banner {
+    font-size: 18px;
+    font-style: italic;
+    color: #cccccc; /* Texto explicativo em cinza claro */
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Controla a distância até o título "Sobre Nós" */
+}
+/* ================= SEÇÃO SOBRE NÓS (EQUILIBRADO) ================= */
+#sobre {
+    padding: 50px 10% 80px 10%; /* O primeiro número controla o espaço no topo do "Sobre Nós" */
+    scroll-margin-top: 80px;
+}
+
+#sobre h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+#sobre h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ffcc00; /* Detalhe em amarelo embaixo do título */
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mudado de space-between para center: traz o texto e a foto para o meio */
+    gap: 40px; /* Controla a distância exata entre o texto e a imagem */
+    width: 100%;
+}
+
+.sobre-texto {
+    flex: 1;
+    text-align: left;
+    max-width: 550px; /* Limita a largura para o texto não ficar espalhado e corrido */
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    color: #dddddd;
+    line-height: 1.6;
+    width: 100%; /* Força todos os parágrafos a seguirem exatamente a mesma largura do bloco */
+}
+
+.sobre-texto ul {
+    list-style: none;
+    margin: 20px 0;
+    padding-left: 10px;
+}
+
+.sobre-texto ul li {
+    margin-bottom: 10px;
+    color: #ffcc00; /* Tópicos destacados em amarelo */
+    font-size: 16px;
+}
+
+.sobre-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOTO MANTIDA EXATAMENTE DO JEITO QUE VOCÊ GOSTOU */
+.foto-solda {
+    width: 100% !important;
+    max-width: 400px !important;     
+    height: 350px !important;        
+    object-fit: cover !important;    
+    border-radius: 16px !important;   
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important; 
+    flex-shrink: 0 !important;
+}
+
+/* FOTO DO TAMANHO DO TEXTO E BEM COMPORTADA */
+.foto-solda {
+    width: 100% !important;
+    max-width: 400px !important;     /* Impede que ela cresça além de um tamanho elegante */
+    height: 350px !important;        /* Força uma altura fixa similar à do bloco de texto */
+    object-fit: cover !important;    /* Corta as sobras da imagem para não distorcer nem achatar */
+    border-radius: 16px !important;   /* Cantos arredondados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important; /* Destaca no fundo grafite */
+    flex-shrink: 0 !important;
+}
+/* ESTILO EXCLUSIVO E SEGURO DA FOTO VERTICAL */
+.foto-solda {
+    width: 100% !important;
+    max-width: 340px !important;     /* Controla a largura para ela ficar esguia e elegante */
+    height: auto !important;          /* Mantém a proporção vertical original intocada */
+    border-radius: 16px !important;   /* Bordas arredondadas harmônicas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important; /* Destaca a imagem do fundo grafite */
+    flex-shrink: 0 !important;
+}
+
+/* ================= SEÇÃO MISSÃO, VISÃO E VALORES ================= */
+#Nossos-Valores {
+    background-color: #111111; /* Fundo preto escuro para contrastar as caixas */
+    padding: 60px 10%;
+}
+
+.valores-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card-valor {
+    background-color: #252525; /* Caixas em cinza escuro texturizado */
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card-valor:hover {
+    transform: translateY(-5px);
+}
+
+.card-valor h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00; /* Linha amarela indicativa */
+    padding-bottom: 8px;
+}
+
+.card-valor p, .card-valor ul {
+    font-size: 15px;
+    color: #dddddd;
+    line-height: 1.5;
+}
+
+.card-valor ul {
+    list-style: none;
+}
+
+.card-valor ul li {
+    margin-bottom: 8px;
+}
+/* ================= SEÇÃO DE SERVIÇOS (SISTEMA DE ABAS) ================= */
+#servicos {
+    background-color: #1e1e1e;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#servicos h2 {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#servicos .subtitulo {
+    font-size: 16px;
+    font-style: italic;
+    color: #bbbbbb;
+    margin-bottom: 40px;
+}
+
+/* Container dos Botões das Abas */
+.abas-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap; 
+}
+
+.botao-aba {
+    background-color: #252525;
+    color: #bbbbbb;
+    border: 1px solid #444444;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-aba:hover {
+    background-color: #333333;
+    color: #ffcc00;
+}
+
+/* Estado Ativo do Botão clicado */
+.botao-aba.ativo {
+    background-color: #ffcc00;
+    color: #111111; /* Inverte: texto preto no botão amarelo */
+    border-color: #ffcc00;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* Área de Conteúdo */
+.abas-conteudo {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.conteudo-item h3 {
+    font-size: 22px;
+    color: #ffcc00;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 10px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Centraliza os textos de cima e de baixo */
+.agenda-automática-container {
+    text-align: center;         
+    padding: 20px;
+    max-width: 1200px;          
+    margin: 0 auto;             
+}
+
+.agenda-automática-container h2,
+.agenda-automática-container .subtitulo {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilização Geral do Rodapé */
+footer {
+    background-color: #111111;   /* Fundo preto absoluto */
+    color: #bbbbbb;              
+    padding: 60px 20px 20px 20px;
+    font-family: sans-serif;
+}
+
+/* Container que divide as 3 colunas */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-coluna {
+    flex: 1;
+    min-width: 250px;            
+}
+
+.footer-coluna h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #ffcc00;              /* Título em amarelo */
+    font-weight: 600;
+    text-transform: uppercase;   
+    letter-spacing: 1px;
+}
+
+.footer-coluna p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.destaque-atendimento {
+    font-style: italic;
+    opacity: 0.9;
+    color: #ffcc00;
+}
+
+/* Link estilizado do Instagram */
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.instagram-link:hover {
+    color: #ffcc00;              
+}
+
+/* Seção Inferior de Créditos */
+.footer-inferior {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.linha-separadora {
+    height: 1px;
+    background-color: rgba(255, 204, 0, 0.2); /* Linha divisória em tom amarelo sutil */
+    margin-bottom: 20px;
+}
+
+.assinatura-dev {
+    margin-top: 8px;
+}
+
+.coracao {
+    color: #ff4d6d;              
+}
+
+.link-dev {
+    color: #ffcc00;              
+    text-decoration: none;       
+    font-weight: 600;            
+    transition: color 0.3s ease;
+}
+
+.link-dev:hover {
+    color: #ffffff;              
+    text-decoration: underline;  
+}
+
+/* ================= CONFIGURAÇÃO PARA CELULARES (RESPONSIVIDADE UNIVERSAL) ================= */
+@media (max-width: 768px) {
+    
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+    }
+
+    header {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px !important;
+        width: 100% !important;
+    }
+
+    header h1 {
+        font-size: 1.2rem !important; 
+        margin-bottom: 12px !important;
+        letter-spacing: 1px !important;
+        text-align: center;
+    }
+
+    header a {
+        margin-left: 0 !important; 
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;     
+        justify-content: center;
+        gap: 10px 15px;      
+        width: 100%;
+    }
+
+    header nav a {
+        font-size: 0.95rem !important;
+        padding: 5px 4px;
+    }
+
+    #sobre {
+        padding: 40px 20px !important; 
+    }
+
+    .sobre-container {
+        display: flex;
+        flex-direction: column !important; 
+        gap: 25px !important;
+        width: 100%;
+    }
+
+    .sobre-texto, .sobre-imagem {
+        width: 100% !important;
+    }
+
+    .sobre-texto p {
+        font-size: 1rem !important; 
+        text-align: left; 
+    }
+
+    .foto-solda {
+        max-width: 280px !important; /* Encolhe suavemente no celular */
+    }
+
+    #Nossos-Valores {
+        padding: 40px 20px !important;
+    }
+
+    .valores-container {
+        display: flex;
+        flex-direction: column !important; 
+        gap: 20px !important;
+    }
+
+    .card-valor {
+        width: 100% !important;
+    }
+}
+/* Container que segura os 3 cards lado a lado */
+.cards-servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* O card em si */
+.card-servico-item {
+    background-color: #fdf8f5; 
+    border: 1px solid #f3e5dc;
+    border-radius: 15px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servico-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-servico-foto {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+}
+
+.card-servico-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.card-servico-item:hover .card-servico-foto img {
+    transform: scale(1.05);
+}
+
+.card-servico-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.card-servico-info h3 {
+    font-size: 1.2rem;
+    color: #333333;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-servico-info p {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+}
+/* ================= SEÇÃO DE CONTATO ================= */
+#contato {
+    background-color: #fdf8f5; 
+    padding: 80px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contato-card {
+    background-color: #ffffff;
+    border: 1px solid #f3e5dc;
+    border-radius: 16px; 
+    padding: 50px 40px;
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(74, 44, 42, 0.04); 
+    box-sizing: border-box;
+}
+
+.contato-card h2 {
+    font-size: 28px;
+    color: #4a2c2a;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contato-card .subtitulo {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    background-color: #25d366 !important; 
+    color: #ffffff !important; 
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 30px; 
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.03);
+    background-color: #20ba59 !important; 
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp svg {
+    flex-shrink: 0;
+    fill: #ffffff; 
+}
+
+@media (max-width: 768px) {
+    #contato {
+        padding: 40px 5%;
+    }
+    .contato-card {
+        padding: 35px 20px;
+    }
+    .contato-card h2 {
+        font-size: 24px;
+    }
+    .btn-whatsapp {
+        display: flex;
+        width: 100%; 
+        padding: 14px 20px;
+    }
+}
